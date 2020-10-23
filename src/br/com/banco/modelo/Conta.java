@@ -40,6 +40,10 @@ public class Conta {
 	}
 
     public boolean transfere(double valor, Conta destino) {
+        if (valor <= 0) {
+            System.out.println("não pode transferir valor menor ou igual a zero");
+            return false;
+        }
 		if (this.saldo >= valor) {
 			this.saldo -= valor;
 			destino.deposita(valor);
