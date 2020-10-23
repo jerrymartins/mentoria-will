@@ -7,7 +7,6 @@ public class Cliente {
     private Endereco endereco;
 
     public Cliente(String nome, String cpf, String profissao, Endereco endereco) {
-        //if (endereco == null) throw new Exception("endereço não pode ser nulo");
         this.nome = nome;
         this.cpf = cpf;
         this.profissao = profissao;
