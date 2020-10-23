@@ -5,9 +5,13 @@ public class Cliente {
     private String cpf;
     private String profissao;
     private Endereco endereco;
+    
 
-    public Cliente(String nome, String cpf, String profissao, Endereco endereco) {
-        this.nome = nome;
+    public Cliente(String nome, String cpf, String profissao, Endereco endereco) throws Exception {
+        if(endereco == null) {
+        	throw new Exception("não pode ter endereço nulo");
+        }
+    	this.nome = nome;
         this.cpf = cpf;
         this.profissao = profissao;
         this.endereco = endereco;

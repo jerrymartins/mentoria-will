@@ -29,30 +29,33 @@ public class Conta {
 
         }
 
-    public boolean saca(double valor) {
+    public void saca(double valor) throws Exception {
 		if (this.saldo >= valor) {
 			this.saldo -= valor;
-			return true;
+			
+			
 		} else {
-			System.out.println("Saldo indisponivel");
-			return false;
+			throw new Exception("Saldo indisponivel para saque: ");
+			
+			
 		}
 	}
 
-    public boolean transfere(double valor, Conta destino) {
+    public void transfere(double valor, Conta destino) throws Exception {
         if (valor <= 0) {
-            System.out.println("não pode transferir valor menor ou igual a zero");
-            return false;
+        	throw new Exception("não pode transferir valor menor ou igual a zero");
+          
         }
 		if (this.saldo >= valor) {
 			this.saldo -= valor;
 			destino.deposita(valor);
 			System.out.println("Trasnferecia no valor de " + valor +" Realizada com sucesso.");
 			
-			return true;
+			
 		}else {
-			System.out.println(" Não foi possivel realizar a transferencia.");
-			return false;
+			throw new Exception("Saldo indiponivel.");
+			
+			
 		}
 	}
 
