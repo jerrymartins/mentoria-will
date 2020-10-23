@@ -42,11 +42,14 @@ public class Conta {
     public boolean transfere(double valor, Conta destino) {
 		if (this.saldo >= valor) {
 			this.saldo -= valor;
+			destino.deposita(valor);
 			System.out.println("Trasnferecia no valor de " + valor +" Realizada com sucesso.");
+			
 			return true;
+		}else {
+			System.out.println(" Não foi possivel realizar a transferencia.");
+			return false;
 		}
-		System.out.println(" Não foi possivel realizar a transferencia.");
-		return false;
 	}
 
     private int getAgencia() {
