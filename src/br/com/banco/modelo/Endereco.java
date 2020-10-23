@@ -26,5 +26,7 @@ public class Endereco {
         this.descicaoLogradouro = descicaoLogradouro;
         this.numero = numero;
         this.cep = cep;
+        System.out.println("Endereço Cadastrado com sucesso: " + "Pais: " + this.pais + " Estado: " + this.estado + " Cidade: " + this.cidade + " Logradouro: " + this.logradouro
+        		+ " Referencia" + this.descicaoLogradouro + " Numero: " + this.numero + " Cep: " + this.cep);
     }
 }
