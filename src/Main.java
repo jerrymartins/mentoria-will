@@ -17,7 +17,7 @@ public class Main {
             conta2.transfere(100,conta1);
             System.out.println("Saldo: " + conta1.pegaSaldo());
             
-            conta2.saca(500);
+            conta2.saca(10001);
             System.out.println("Saldo: " + conta2.pegaSaldo());
         	
         }catch (Exception e) {
