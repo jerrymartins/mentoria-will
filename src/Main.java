@@ -15,9 +15,12 @@ public class Main {
             Conta conta2 = new Conta(1526, 56878,1000, cliente2 ); 
            
             conta2.transfere(100,conta1);
+            conta2.transfere(5,conta1);
+            conta2.transfere(80,conta1);
+            conta2.transfere(75,conta1);
             System.out.println("Saldo: " + conta1.pegaSaldo());
             
-            conta2.saca(10001);
+            conta2.saca(10);
             System.out.println("Saldo: " + conta2.pegaSaldo());
         	
         }catch (Exception e) {

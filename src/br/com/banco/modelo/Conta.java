@@ -1,10 +1,15 @@
 package br.com.banco.modelo;
 
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 public class Conta {
     private int agencia;
     private int numeroConta;
     private double saldo = 0;
     private Cliente titular;
+    private List<Transferencia> historico = new ArrayList<>();
 
     private Conta() {
     }
@@ -49,6 +54,7 @@ public class Conta {
 		if (this.saldo >= valor) {
 			this.saldo -= valor;
 			destino.deposita(valor);
+			historico.add(new Transferencia(this, destino, valor, new Date()));
 			System.out.println("Trasnferecia no valor de " + valor +" Realizada com sucesso.");
 			
 			
