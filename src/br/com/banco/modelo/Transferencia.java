@@ -15,7 +15,7 @@ public class Transferencia {
         this.valor = valor;
         this.data = data;
     }
-
+ 
     public Conta getEmissor() {
         return emissor;
     }
@@ -47,5 +47,13 @@ public class Transferencia {
     public void setData(Date data) {
         this.data = data;
     }
+
+	@Override
+	public String toString() {
+		return "Transferencia [emissor =" + emissor + ", destinatario = " + destinatario + ", valor = " + valor + ", data = "
+				+ data + "]";
+	}
+    
+    
 
 }

@@ -4,12 +4,13 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Conta {
+public abstract class Conta {
     private int agencia;
     private int numeroConta;
     private double saldo = 0;
     private Cliente titular;
     private List<Transferencia> historico = new ArrayList<>();
+    private List<Recibo> recebimento = new ArrayList<>();
 
     private Conta() {
     }
@@ -33,7 +34,20 @@ public class Conta {
             this.saldo = this.saldo + valorDeposito;
 
         }
-
+    public void recebimentos(Conta remetente, double valor) {
+    	remetente.transfere(valor, destino);
+    	
+    }
+    
+    public boolean saca(double valor) {
+        if(this.saldo >= valor) {
+            this.saldo -= valor;
+            return true;
+        } else {
+            return false;
+        } 
+    }
+/*
     public void saca(double valor) throws Exception {
 		if (this.saldo >= valor) {
 			this.saldo -= valor;
@@ -45,7 +59,8 @@ public class Conta {
 			
 		}
 	}
-
+	*/
+  
     public void transfere(double valor, Conta destino) throws Exception {
         if (valor <= 0) {
         	throw new Exception("não pode transferir valor menor ou igual a zero");
@@ -64,6 +79,10 @@ public class Conta {
 			
 		}
 	}
+    public List<Transferencia> listaHistorico() {
+    	return this.historico;
+    }
+
 
     private int getAgencia() {
         return agencia;
@@ -105,5 +124,6 @@ public class Conta {
     public int contaCliente() {
     	return numeroConta;
     }
+    
 }
 

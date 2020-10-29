@@ -12,7 +12,7 @@ public class Cliente {
         	throw new Exception("não pode ter endereço nulo");
         }
     	this.nome = nome;
-        this.cpf = cpf;
+        this.cpf = cpf; 
         this.profissao = profissao;
         this.endereco = endereco;
         System.out.println(" Cliente cadastrado com sucesso: " + " Nome Cliente: "  + this.nome + " CPF: " + this.cpf +" Profissão: " + this.profissao);
