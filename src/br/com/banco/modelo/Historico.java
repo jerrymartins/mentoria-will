@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import br.com.banco.ENUM.TipoOperacao;
+import br.com.banco.OPERACAO.Operacao;
+
 public class Historico {
 	
 	private List<Operacao> historico;

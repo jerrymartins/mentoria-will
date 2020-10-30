@@ -1,4 +1,5 @@
-package br.com.banco.modelo;
+package br.com.banco.ENUM;
+
 
 public enum TipoOperacao {
 	

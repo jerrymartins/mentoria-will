@@ -1,9 +1,5 @@
 package br.com.banco.modelo;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
 public abstract class Conta {
     private int agencia;
     private int numeroConta;

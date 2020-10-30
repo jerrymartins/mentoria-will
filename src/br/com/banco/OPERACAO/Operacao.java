@@ -1,6 +1,9 @@
-package br.com.banco.modelo;
+package br.com.banco.OPERACAO;
 
 import java.util.Date;
+
+import br.com.banco.ENUM.TipoOperacao;
+import br.com.banco.modelo.Conta;
 
 public class Operacao {
 

@@ -1,12 +1,13 @@
+package MAIN;
 
 
 import java.util.Date;
 
+import br.com.banco.CONTAS.ContaCorrente;
+import br.com.banco.ENUM.TipoOperacao;
 import br.com.banco.modelo.Cliente;
-import br.com.banco.modelo.ContaCorrente;
 import br.com.banco.modelo.Endereco;
 import br.com.banco.modelo.Historico;
-import br.com.banco.modelo.TipoOperacao;
 
 public class Main {
     public static void main(String[] args) {
@@ -31,16 +32,13 @@ public class Main {
             conta1.transfere(100, conta2);
             hitorico.registrarOperacao(conta1, conta2, 100, TipoOperacao.TRANFERENCIA, new Date());
             
+            conta1.saca(150.0);
+            System.out.println(conta1.pegaSaldo());
+            
             System.out.println("Fim da operação");
             
             
-           
-            
-          
-            
-            
 
-        	
         }catch (Exception e) {
         	e.printStackTrace();
 			

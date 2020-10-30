@@ -1,4 +1,7 @@
-package br.com.banco.modelo;
+package br.com.banco.CONTAS;
+
+import br.com.banco.modelo.Cliente;
+import br.com.banco.modelo.Conta;
 
 public class ContaStudantil extends Conta {
 
