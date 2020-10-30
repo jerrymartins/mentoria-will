@@ -9,8 +9,8 @@ public abstract class Conta {
     private int numeroConta;
     private double saldo = 0;
     private Cliente titular;
-    private List<Transferencia> historico = new ArrayList<>();
-    private List<Recibo> recebimento = new ArrayList<>();
+  
+   
 
     private Conta() {
     }
@@ -29,25 +29,19 @@ public abstract class Conta {
         this.titular = titular;
     }
 
-    public void deposita(double valorDeposito) {
+    public void deposita(double valorDeposito ,Conta emissor) {
             System.out.println("Valor depositado foi de " + valorDeposito );
             this.saldo = this.saldo + valorDeposito;
+            
 
         }
+     
     public void recebimentos(Conta remetente, double valor) {
-    	remetente.transfere(valor, destino);
     	
     }
     
-    public boolean saca(double valor) {
-        if(this.saldo >= valor) {
-            this.saldo -= valor;
-            return true;
-        } else {
-            return false;
-        } 
-    }
-/*
+    
+
     public void saca(double valor) throws Exception {
 		if (this.saldo >= valor) {
 			this.saldo -= valor;
@@ -59,7 +53,7 @@ public abstract class Conta {
 			
 		}
 	}
-	*/
+	
   
     public void transfere(double valor, Conta destino) throws Exception {
         if (valor <= 0) {
@@ -68,8 +62,9 @@ public abstract class Conta {
         }
 		if (this.saldo >= valor) {
 			this.saldo -= valor;
-			destino.deposita(valor);
-			historico.add(new Transferencia(this, destino, valor, new Date()));
+			destino.deposita(valor, this);
+			
+			
 			System.out.println("Trasnferecia no valor de " + valor +" Realizada com sucesso.");
 			
 			
@@ -79,9 +74,7 @@ public abstract class Conta {
 			
 		}
 	}
-    public List<Transferencia> listaHistorico() {
-    	return this.historico;
-    }
+
 
 
     private int getAgencia() {
