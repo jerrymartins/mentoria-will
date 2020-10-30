@@ -9,13 +9,18 @@ import br.com.banco.OPERACAO.Operacao;
 
 public class Historico {
 	
-	private List<Operacao> historico;
+	private List<Operacao> historico = new ArrayList<>();
 
-	public Historico() {
-		this.historico = new ArrayList<Operacao>();
+	public Historico() {	
 		
 	}
 	
+	
+	private Historico(List<Operacao> historico) {
+		this.historico = historico;
+	}
+
+
 	public Operacao registrarOperacao(Conta emissor, Conta destinatario, double valor,TipoOperacao tipoOperacao, Date data) throws Exception {
 		//if(emissor == null) throw new Exception("Emissor não informado");
 		//if(destinatario == null) throw new Exception ("Destinatario não informado");
@@ -26,5 +31,15 @@ public class Historico {
 		this.historico.add(operacao);
 		return operacao;
 	}
+
+	private List<Operacao> getHistorico() {
+		return historico;
+	}
+
+	private void setHistorico(List<Operacao> historico) {
+		this.historico = historico;
+	}
+	
+	
 	
 }
