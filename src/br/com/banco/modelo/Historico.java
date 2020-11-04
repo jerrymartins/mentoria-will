@@ -39,7 +39,15 @@ public class Historico {
 	private void setHistorico(List<Operacao> historico) {
 		this.historico = historico;
 	}
-	
+
+
+	@Override
+	public String toString() {
+		String dados = historico.stream().map(operacao -> operacao.toString()).toString();
+		System.out.println("Dados " + dados.toString());
+		return "Historico [historico= " + historico + "]";
+	}
+
 	
 	
 }

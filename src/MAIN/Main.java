@@ -32,10 +32,12 @@ public class Main {
             conta1.transfere(100, conta2);
             hitorico.registrarOperacao(conta1, conta2, 100, TipoOperacao.TRANFERENCIA, new Date());
             
+            
             conta1.saca(150.0);
             System.out.println(conta1.pegaSaldo());
             
-            System.out.println(hitorico);
+            hitorico.toString();           
+            
             
             System.out.println("Fim da operação");
             

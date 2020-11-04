@@ -22,20 +22,7 @@ public class Main {
 				Jose.saca(5);
 				
 				System.out.println(Jose.pegaSaldo());
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
+
 				sc.close();			
 			 }catch (Exception e) {
 		        	e.printStackTrace();
