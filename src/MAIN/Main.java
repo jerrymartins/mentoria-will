@@ -35,7 +35,7 @@ public class Main {
             conta1.saca(150.0);
             System.out.println(conta1.pegaSaldo());
             
-            
+            System.out.println(hitorico);
             
             System.out.println("Fim da operação");
             
@@ -44,6 +44,7 @@ public class Main {
         }catch (Exception e) {
         	e.printStackTrace();
 			
-		}
+		} 	
+    	
     }
 }
