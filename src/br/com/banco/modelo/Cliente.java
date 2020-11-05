@@ -18,7 +18,7 @@ public class Cliente {
         System.out.println(" Cliente cadastrado com sucesso: " + " Nome Cliente: "  + this.nome + " CPF: " + this.cpf +" Profissão: " + this.profissao);
     }
 
-    private String getNome() {
+    public String getNome() {
         return nome;
     }
 

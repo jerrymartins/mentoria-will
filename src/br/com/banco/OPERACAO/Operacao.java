@@ -80,7 +80,7 @@ public class Operacao {
 
 	@Override
 	public String toString() {
-		return "Transferencia [emissor =" + emissor + ", destinatario = " + destinatario + ", valor = " + valor + ", data = "
+		return "\nTransferencia [emissor = " + emissor.getTitular().getNome() + ", destinatario = " + destinatario.getTitular().getNome() + ", valor = " + valor + ", data = "
 				+ data + "]";
 	}
     

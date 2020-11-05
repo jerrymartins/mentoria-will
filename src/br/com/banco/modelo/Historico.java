@@ -3,6 +3,8 @@ package br.com.banco.modelo;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
+
 
 import br.com.banco.ENUM.TipoOperacao;
 import br.com.banco.OPERACAO.Operacao;
@@ -43,11 +45,9 @@ public class Historico {
 
 	@Override
 	public String toString() {
-		String dados = historico.stream().map(operacao -> operacao.toString()).toString();
+		List<String> dados = historico.stream().map(operacao -> operacao.toString()).collect(Collectors.toList());
 		System.out.println("Dados " + dados.toString());
 		return "Historico [historico= " + historico + "]";
 	}
 
-	
-	
 }

@@ -27,7 +27,7 @@ public class Main {
             hitorico.registrarOperacao(conta2, conta1, 500, TipoOperacao.DEPOSITO, new Date());
 
             conta1.saca(100);
-            hitorico.registrarOperacao(conta1, null, 1000, TipoOperacao.SAQUE, new Date());
+            hitorico.registrarOperacao(conta1, conta2, 1000, TipoOperacao.SAQUE, new Date());
   
             conta1.transfere(100, conta2);
             hitorico.registrarOperacao(conta1, conta2, 100, TipoOperacao.TRANFERENCIA, new Date());
@@ -39,7 +39,7 @@ public class Main {
             hitorico.toString();           
             
             
-            System.out.println("Fim da operação");
+            
             
             
 

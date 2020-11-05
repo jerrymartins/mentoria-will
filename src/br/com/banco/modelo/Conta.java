@@ -97,7 +97,7 @@ public abstract class Conta {
         this.saldo = saldo;
     }
 
-    private Cliente getTitular() {
+    public Cliente getTitular() {
         return titular;
     }
 
