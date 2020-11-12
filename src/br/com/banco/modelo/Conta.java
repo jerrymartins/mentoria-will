@@ -1,5 +1,8 @@
 package br.com.banco.modelo;
 
+import br.com.banco.EXCEPTION.SacadorInvalidoExecao;
+import br.com.banco.EXCEPTION.ValorInvalidoExecpion;
+
 public abstract class Conta {
     private int agencia;
     private int numeroConta;
@@ -38,22 +41,24 @@ public abstract class Conta {
     
     
 
-    public void saca(double valor) throws Exception {
-		if (this.saldo >= valor) {
-			this.saldo -= valor;
+    public void saca(double valor) throws ValorInvalidoExecpion, SacadorInvalidoExecao {
+		if(this.saldo < valor) {
 			
-			
-		} else {
-			throw new Exception("Saldo indisponivel para saque: ");
-			
+			throw new ValorInvalidoExecpion("Saque menor que valor disponivel");
+		}
+		if(this.titular.getNome() != "Carla") {
+			throw new SacadorInvalidoExecao ("Saque não autorizado");
 			
 		}
-	}
+			
+		this.saldo -= valor;
+		}
 	
+    
   
-    public void transfere(double valor, Conta destino) throws Exception {
+    public void transfere(double valor, Conta destino) throws ValorInvalidoExecpion {
         if (valor <= 0) {
-        	throw new Exception("não pode transferir valor menor ou igual a zero");
+        	throw new ValorInvalidoExecpion("não pode transferir valor menor ou igual a zero");
           
         }
 		if (this.saldo >= valor) {
@@ -65,7 +70,7 @@ public abstract class Conta {
 			
 			
 		}else {
-			throw new Exception("Saldo indiponivel.");
+			throw new ValorInvalidoExecpion("Saldo indiponivel.");
 			
 			
 		}

@@ -1,16 +1,16 @@
 package MAIN;
 
 
-import java.util.Date;
-
 import br.com.banco.CONTAS.ContaCorrente;
-import br.com.banco.ENUM.TipoOperacao;
+import br.com.banco.EXCEPTION.SacadorInvalidoExecao;
+import br.com.banco.EXCEPTION.ValorInvalidoExecpion;
 import br.com.banco.modelo.Cliente;
 import br.com.banco.modelo.Endereco;
 import br.com.banco.modelo.Historico;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
+    	
     	      
         try {
         	Historico hitorico = new Historico();
@@ -20,30 +20,12 @@ public class Main {
             ContaCorrente conta1 = new ContaCorrente(1525, 56878,  cliente1 );
             ContaCorrente conta2 = new ContaCorrente(1525, 56879,  cliente2 );
             
-            conta1.deposita(1000, conta2);
-            hitorico.registrarOperacao(conta1, conta2, 1000, TipoOperacao.DEPOSITO, new Date());
-            
-            conta2.deposita(500, conta1);
-            hitorico.registrarOperacao(conta2, conta1, 500, TipoOperacao.DEPOSITO, new Date());
-
-            conta1.saca(100);
-            hitorico.registrarOperacao(conta1, conta2, 1000, TipoOperacao.SAQUE, new Date());
-  
-            conta1.transfere(100, conta2);
-            hitorico.registrarOperacao(conta1, conta2, 100, TipoOperacao.TRANFERENCIA, new Date());
-            
-            
-            conta1.saca(150.0);
-            System.out.println(conta1.pegaSaldo());
-            
-            hitorico.toString();           
-            
-            
-            
+            conta1.deposita(200, conta1);
+            conta1.saca(10); 
             
             
 
-        }catch (Exception e) {
+        }catch (ValorInvalidoExecpion | SacadorInvalidoExecao e) {
         	e.printStackTrace();
 			
 		} 	
