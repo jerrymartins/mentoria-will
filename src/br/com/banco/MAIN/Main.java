@@ -1,4 +1,4 @@
-package MAIN;
+package br.com.banco.MAIN;
 
 
 import br.com.banco.CONTAS.ContaCorrente;

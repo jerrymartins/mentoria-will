@@ -1,4 +1,4 @@
-package Aplicação;
+package br.com.banco.Aplicação;
 
 import java.util.Locale;
 import java.util.Scanner;
