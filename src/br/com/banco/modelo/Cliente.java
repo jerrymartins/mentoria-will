@@ -6,6 +6,9 @@ public class Cliente {
     private String profissao;
     private Endereco endereco;
     
+    public Cliente() {
+    	
+    }
 
     public Cliente(String nome, String cpf, String profissao, Endereco endereco) throws Exception {
         if(endereco == null) {

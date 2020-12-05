@@ -11,7 +11,7 @@ public abstract class Conta {
   
    
 
-    private Conta() {
+    protected Conta() {
     }
     
     public Conta(int agencia, int numeroConta, double saldo, Cliente titular) {
