@@ -19,12 +19,18 @@ public class Main {
         	Cliente cliente1 = new Cliente("Bia ", "50088647836", "Biomedica", endereco );
             Cliente cliente2 = new Cliente("Carlos", "78888647836", "Advogado", endereco );
             Cliente cliente3 = new Cliente();
+            
+            
+            
+            Object[] contas = new Object[5];
+            
             ContaCorrente conta1 = new ContaCorrente(1525, 56878,  cliente1 );
+            contas[0] = conta1;
             ContaCorrente conta2 = new ContaCorrente(1525, 56879,  cliente2 );
+            contas[1] = conta2;
             
-            Conta conta3= new ContaCorrente();
-            System.out.println(conta2.toString());
             
+                        
             
             
 
