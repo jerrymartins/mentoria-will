@@ -1,11 +1,13 @@
 package br.com.banco.MAIN;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 import br.com.banco.CONTAS.ContaCorrente;
 import br.com.banco.EXCEPTION.SacadorInvalidoExecao;
 import br.com.banco.EXCEPTION.ValorInvalidoExecpion;
 import br.com.banco.modelo.Cliente;
-import br.com.banco.modelo.Conta;
 import br.com.banco.modelo.Endereco;
 import br.com.banco.modelo.Historico;
 
@@ -21,13 +23,23 @@ public class Main {
             Cliente cliente3 = new Cliente();
             
             
+            List<ContaCorrente> contas;
             
-            Object[] contas = new Object[5];
-            
+            contas = new ArrayList<ContaCorrente>();
             ContaCorrente conta1 = new ContaCorrente(1525, 56878,  cliente1 );
-            contas[0] = conta1;
+            contas.add(conta1);
             ContaCorrente conta2 = new ContaCorrente(1525, 56879,  cliente2 );
-            contas[1] = conta2;
+            contas.add(conta2);
+            
+            
+            
+            System.out.println("Adicionar nova conta?");
+            
+            
+            
+            
+            
+            
             
             
                         

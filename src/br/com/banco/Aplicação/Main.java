@@ -1,5 +1,7 @@
 package br.com.banco.Aplicação;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -16,13 +18,25 @@ public class Main {
 				Scanner sc = new Scanner(System.in);
 				Endereco endereco = new Endereco(pais(), estado(), cidade(), bairro(), rua(), pontoReferencia(), numeroCasa(), cep());
 				Cliente cliente = new Cliente(nomeCliente(),cpf(),profissao(),endereco);
-				ContaCorrente Jose = new ContaCorrente(agencia(), conta(), cliente);
 				
-				Jose.deposita(depositar(), Jose);
-				Jose.saca(5);
+				List<ContaCorrente> contaCorrente;
 				
-				System.out.println(Jose.pegaSaldo());
-
+				contaCorrente = new ArrayList<ContaCorrente>();
+				
+				
+				ContaCorrente jose = new ContaCorrente(agencia(), conta(), cliente);
+				contaCorrente.add(jose);
+				
+				
+				
+				//ContaCorrente Jose = new ContaCorrente(agencia(), conta(), cliente);
+				
+				
+				
+				
+				
+				
+				
 				sc.close();			
 			 }catch (Exception e) {
 		        	e.printStackTrace();
