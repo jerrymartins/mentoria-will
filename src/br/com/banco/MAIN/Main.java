@@ -31,9 +31,21 @@ public class Main {
             ContaCorrente conta2 = new ContaCorrente(1525, 56879,  cliente2 );
             contas.add(conta2);
             
+            for(ContaCorrente conta : contas) {
+            	System.out.println("Dados bancarios: " + " Argencia: " + conta.agenciaCliente() + " Numero da conta " + conta.contaCliente());
+            }
+            
+           contas.remove(0);
+           
+           
+           for(ContaCorrente conta : contas) {
+           	System.out.println("Dados bancarios: " + " Argencia: " + conta.agenciaCliente() + " Numero da conta " + conta.contaCliente());
+           }
             
             
-            System.out.println("Adicionar nova conta?");
+            
+            
+            //System.out.println("Adicionar nova conta?");
             
             
             
