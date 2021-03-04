@@ -24,12 +24,13 @@ public class Main {
 				contaCorrente = new ArrayList<ContaCorrente>();
 				
 				
-				ContaCorrente jose = new ContaCorrente(agencia(), conta(), cliente);
-				contaCorrente.add(jose);
+				//ContaCorrente jose = new ContaCorrente(agencia(), conta(), cliente);
+				//contaCorrente.add(jose);
 				
 				
 				
-				//ContaCorrente Jose = new ContaCorrente(agencia(), conta(), cliente);
+				
+				
 				
 				
 				
